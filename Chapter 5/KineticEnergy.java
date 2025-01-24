@@ -5,15 +5,22 @@ public class KineticEnergy {
         Scanner input = new Scanner(System.in);
 
         while (true) { 
-            System.out.println("Enter the mass of the object in kilograms: ");
-            double mass = input.nextDouble();
+            double mass = 0;
+            while(true) {
+                System.out.println("Enter the mass of the object in kilograms: ");
+                mass = input.nextDouble();
+                if(mass >= 0) {
+                    break;
+                }
+                System.out.println("Invalid answer. ");
+            }
 
             System.out.println("Enter the velocity of the object in meters per second: ");
             double velocity = input.nextDouble();
             input.nextLine();
 
             double kineticEnergy = kineticEnergy(mass, velocity);
-            System.out.println("The kinetic energy of the object is " + kineticEnergy);
+            System.out.println("The kinetic energy of the object is " + kineticEnergy + " joules. ");
 
             System.out.println("Would you like to enter more values? ");
             String option = input.nextLine();

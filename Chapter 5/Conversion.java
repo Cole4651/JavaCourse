@@ -11,8 +11,15 @@ public class Conversion {
             System.out.println("3. Convert to feet");
             System.out.println("4. Quit");
             System.out.println();
-            System.out.println("Enter choice: ");
-            int conversion = input.nextInt();
+            int conversion = 0;
+            while(true) {
+                System.out.println("Enter choice: ");
+                conversion = input.nextInt();
+                if(conversion > 0 && conversion < 5) {
+                    break;
+                }
+                System.out.println("Invalid answer. ");
+            }
             System.out.println();
 
             if(conversion == 4) {

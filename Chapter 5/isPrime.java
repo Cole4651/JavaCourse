@@ -6,18 +6,21 @@ public class isPrime {
         Scanner input = new Scanner(System.in);
 
         while(true) {
-            System.out.println("Enter an integer: ");
-            int num = input.nextInt();
-            input.nextLine();
-
-            boolean isPrime = isPrime(num);
-            if(isPrime) {
-                System.out.print("Your number is prime. ");
-            } else {
-                System.out.println("Your number is not prime. ");
+            int num = 0;
+            try {
+                System.out.println("Enter an integer: ");
+                num = input.nextInt();
+                boolean isPrime = isPrime(num);
+                if(isPrime) {
+                    System.out.print("Your number is prime. ");
+                } else {
+                    System.out.println("Your number is not prime. ");
+                }
+            } catch (Exception e) {
+                System.out.println("Invalid answer. ");
             }
 
-
+            input.nextLine();
             System.out.println("Would you like to enter another value? ");
             String option = input.nextLine();
             if(option.equals("no")) {
@@ -29,7 +32,11 @@ public class isPrime {
     private static boolean isPrime(int num) {
         boolean isPrime = true;
 
-        for(int i = 2; i < num/2; i++) {
+        if(num < 0) {
+            return false;
+        }
+
+        for(int i = 2; i < num; i++) {
             int remainder = num % i;
 
             if(remainder == 0) {

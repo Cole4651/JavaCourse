@@ -7,12 +7,27 @@ public class MonthDaysTester {
 
         while(true) {
             System.out.println("Enter a month (1-12): ");
-            int month = input.nextInt();
+            int month = 0;
+            while(true) {
+                month = input.nextInt();
+                if(month > 0 && month <=12 ) {
+                    break;
+                }
+                System.out.println("Invalid answer, try again. ");
+            }
+
             System.out.println("Enter a year: ");
-            int year = input.nextInt();
+            int year = 0;
+            while(true) {
+                year = input.nextInt();
+                if(year >= 0) {
+                    break;
+                }
+                System.out.println("Invalid answer, try again.");
+            }
 
             MonthDays test = new MonthDays(month, year);
-            System.out.println(test.getNumberOfDays());
+            System.out.println(test.getNumberOfDays() + " days");
 
             input.nextLine();
             System.out.println();

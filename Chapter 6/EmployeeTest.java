@@ -8,5 +8,7 @@ public class EmployeeTest{
         System.out.println(mark);
         Employee joy = new Employee("Joy Rogers", 81774, "Manufacturing", "Engineer");
         System.out.println(joy);
+        Employee test = new Employee("John Doe", 12345, "Loafer", "Professional");
+        System.out.println(test);
     }
 }

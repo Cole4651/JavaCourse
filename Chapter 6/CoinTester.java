@@ -14,7 +14,7 @@ public class CoinTester {
             for(int i = 0; i < 20; i ++) {
                 coin.toss();
                 System.out.println("Toss " + (i+1) + ": " + coin.getSideUp());
-                if(coin.getSideUp() == "tails") {
+                if("tails".equals(coin.getSideUp())) {
                     tails ++;
                 } else {
                     heads++;

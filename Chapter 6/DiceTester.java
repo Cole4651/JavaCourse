@@ -28,8 +28,7 @@ public class DiceTester {
 
             System.out.println();
             System.out.println("Final Score: ");
-            System.out.println("User's score: " + userScore);
-            System.out.println("Computer's score: " + compScore);
+            System.out.print(userScore + "-" + compScore);
             System.out.println();
 
 

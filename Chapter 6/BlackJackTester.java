@@ -7,7 +7,6 @@ public class BlackJackTester {
         Scanner input = new Scanner(System.in);
 
         int userTotal = 0;
-        int computerTotal = 0;
 
         while(userTotal <= 21) {
             BlackJack user = new BlackJack();
@@ -24,9 +23,12 @@ public class BlackJackTester {
                 String hit = input.nextLine();
                 if(hit.equals("yes")) {
                     user.addScore();
-                } else {
+                } else if (hit.equals("no")) {
                     break;
+                } else {
+                    System.out.println("Invalid answer, try again. ");
                 }
+
                 if(user.getScore() > 21) {
                     System.out.println("Your total: " + user.getScore());
                     System.out.println("You busted.");

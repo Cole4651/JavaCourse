@@ -3,21 +3,29 @@ import java.util.Scanner;
 public class TestScoresTester {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Test Score 1: ");
-        int testOne = input.nextInt();
+        while(true) {
+            TestScores user = new TestScores();
 
-        System.out.println("Test Score 2: ");
-        int testTwo = input.nextInt();
+            System.out.println("Test Score 1: ");
+            double testOne = user.testScore();
 
-        System.out.println("Test Score 3: ");
-        int testThree = input.nextInt();
+            System.out.println("Test Score 2: ");
+            double testTwo = user.testScore();
 
-        TestScores user = new TestScores();
-        user.setTestOne(testOne);
-        user.setTestTwo(testTwo);
-        user.setTestThree(testThree);
-        
-        System.out.println("Average: " + user.average());
+            System.out.println("Test Score 3: ");
+            double testThree = user.testScore();
 
+            user.setTestOne(testOne);
+            user.setTestTwo(testTwo);
+            user.setTestThree(testThree);
+            
+            System.out.println("Average: " + user.average());
+
+            System.out.println("Would you like to test again? ");
+            String choice = input.nextLine();
+            if(choice.equals("no")) {
+                break;
+            }
+        }
     }
 }

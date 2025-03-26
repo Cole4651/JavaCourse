@@ -1,69 +1,52 @@
-import java.util.Scanner;
-import java.io.*;
+import java.util.ArrayList;
 
 public class NumberAnalysis {
-    String fileName;
-    int[] array;
+    ArrayList<Integer> array;
 
-    public NumberAnalysis(String fileName) {
-        this.fileName = fileName;
-
-        File file = new File(fileName);
-        Scanner inputFile = new Scanner(file);
-
-        int i = 0;
-        while(inputFile.hasNextInt()) {
-            int line = inputFile.nextInt();
-            array[i] = line;
-            i++;
-        }
-
-        getTotal(array);
-        getAverage(array);
-        getHighest(array);
-        getLowest(array);
+    public NumberAnalysis(ArrayList<Integer> array) {
+        this.array = array;
     }
 
 
-    private static void getTotal(int[] array) {
+    public int getTotal() {
         int total = 0;
-        for(int i = 0; i < array.length; i++) {
-            total += array[i];
+        for(int i = 0; i < array.size(); i++) {
+            total += array.get(i);
         }
 
-        System.out.println("Total: " + total);
+        return total;
     }
 
-    private static void getAverage(int[] array) {
+    public double getAverage() {
         double total = 0;
-        for(int i = 0; i < array.length; i++) {
-            total += array[i];
+        for(int i = 0; i < array.size(); i++) {
+            total += array.get(i);
         }
-        double average = (total / array.length) * 100;
+        double average = (total / array.size()) * 100;
         average = Math.round(average);
 
-        System.out.println("Average: " + (average/100));
+        return (average/100);
     }
+    
+    public int getHighest() {
+        int highest = array.get(0);
 
-    private static void getHighest(int[] array) {
-        int highest = array[0];
-
-        for(int i = 0; i < array.length; i++) {
-            if(highest < array[i]) {
-                highest = array[i];
+        for(int i = 0; i < array.size(); i++) {
+            if(highest < array.get(i)) {
+                highest = array.get(i);
             }
         }
-       System.out.println("Highest: " + highest);
+       return highest; 
     }
 
-    private static void getLowest(int[] array) {
-        int lowest = array[0];
+    public int getLowest() {
+        int lowest = array.get(0);
 
-        for(int i = 0; i < array.length; i++) {
-            if(lowest > array[i]) {
-                lowest = array[i];
+        for(int i = 0; i < array.size(); i++) {
+            if(lowest > array.get(i)) {
+                lowest = array.get(i);
             }
         }
-        System.out.println("Lowest: " + lowest);
+        return lowest;
     }
 }

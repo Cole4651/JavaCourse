@@ -11,17 +11,13 @@ public class RainfallTester {
                 double rainfall;
                 while(true) {
                     System.out.println("Rain fall for month " + (i+1) + ": ");
-                    try {
-                        rainfall = input.nextDouble();
-                        if(rainfall >= 0) {
-                            break;
-                        } else {
-                            System.out.println("Invalid Answer. Try again");
-                        }
-                    } catch (Exception e) {
+                    rainfall = input.nextDouble();
+                    if(rainfall >= 0) {
+                        break;
+                    } else {
                         System.out.println("Invalid Answer. Try again");
-                        input.nextLine();
                     }
+                   
                 }
 
                 rain.addMonth(rainfall, i);

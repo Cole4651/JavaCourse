@@ -21,15 +21,13 @@ public class GradeBook {
             }
         }
 
-        for(int i = 0; i < 4; i++) {
-            System.out.println(testScores[index][i]);
-        }
-
         double total = 0;
         for(int i = 0; i < 3; i++) {
             total += testScores[index][i];
         }
-        return total / 3;
+
+        total *= 100;
+        return Math.round(total / 3.0) / 100.0;
     }
 
     public void setLetterGrade(double average, int studentIndex) {

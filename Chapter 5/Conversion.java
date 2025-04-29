@@ -32,7 +32,7 @@ public class Conversion {
             switch (conversion) {
                 case 1 -> System.out.println(meters + " meters is " + showKilo(meters) + " kilometers");
                 case 2 -> System.out.println(meters + " meters is " + showInches(meters) + " inches");
-                case 3 -> System.out.println(meters + "meters is " + showFeet(meters) + " feet");
+                case 3 -> System.out.println(meters + " meters is " + showFeet(meters) + " feet");
             }
             System.out.println();
         }

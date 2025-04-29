@@ -25,9 +25,7 @@ public class Rainfall {
         for(int i = 0; i < 12; i++) {
             total += rain[i];
         }
-
-        total *= 100.0;
-        return Math.round(total / 12.0) / 100.0;
+        return rounded(total / 12);
     }
 
     public int getMostRain() {
@@ -48,6 +46,12 @@ public class Rainfall {
             }
         }
         return index + 1;
+    }
+
+    public static double rounded(double num) {
+        num *= 100;
+        num = Math.round(num);
+        return num / 100;
     }
 
 }

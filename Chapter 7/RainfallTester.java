@@ -1,3 +1,5 @@
+// I accidentally submitted the wrong file before i forgot I had to add a list
+
 import java.util.Scanner;
 
 public class RainfallTester {

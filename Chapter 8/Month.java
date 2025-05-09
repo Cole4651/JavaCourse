@@ -164,10 +164,10 @@ public class Month {
     }
 
     public boolean greaterThan(Month month) {
-        return month.getMonthNumber() > this.month;
+        return month.getMonthNumber() < this.month;
     }
 
     public boolean lessThan(Month month) {
-        return month.getMonthNumber() < this.month;
+        return month.getMonthNumber() > this.month;
     }
 }

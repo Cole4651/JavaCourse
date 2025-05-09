@@ -17,8 +17,7 @@ public class Player {
         System.out.println("You rolled a " + roll);
 
         if(score <= 0) {
-            score -= roll;
-            score = Math.abs(score);
+            score += roll;
         } else {
             score -= roll;
         }

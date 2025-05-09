@@ -16,7 +16,8 @@ public class AreaTester {
                 }
                 System.out.println("Invalid option, pick 1, 2, or 3. ");
             }
-
+            
+            System.out.println("Negative Values converted to positives values automatically.");
             switch (choice) {
                 case 1 -> {
                     System.out.println("Enter radius: ");

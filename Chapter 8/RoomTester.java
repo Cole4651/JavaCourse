@@ -15,15 +15,17 @@ public class RoomTester {
                 System.out.println("Enter price per square foot of desired carpenting: ");
                 double price = input.nextDouble();
 
-                if(width >= 0 && length >= 0) {
+                if(width > 0 && length > 0) {
                     room = new RoomDimension(width, length);
                     carpet = new RoomCarpet(room, price);
                     break;
                 }
                 System.out.println("Something is invalid. ");
             }
-            
-            System.out.println("Total cost of carpeting: $" + carpet.getCost());
+            double total = carpet.getCost();
+            total = Math.round(total*100);
+            total = total / 100;
+            System.out.println("Total cost of carpeting: $" + total);
 
 
             System.out.println();

@@ -20,7 +20,7 @@ public class MonthTester {
 
             System.out.println("Month 1 equals Month 2: " + month1.equals(month2));
             System.out.println("Month 1 is greater than Month 2: " + month1.greaterThan(month2));
-            System.out.println("Month 2 is less than Month 1: " + month2.lessThan(month1));
+            System.out.println("Month 1 is less than Month 2: " + month1.lessThan(month2));
             System.out.println("Both Months: " + month1 + " | " + month2);
 
 

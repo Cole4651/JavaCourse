@@ -20,15 +20,30 @@ public class Geometry {
             double area = 0;
             switch(choice) {
                 case 1 -> {
-                    System.out.println("Enter the radius: ");
-                    double radius = input.nextDouble();
+                    double radius = 0;
+                    while(true) {
+                        System.out.println("Enter the radius: ");
+                        radius = input.nextDouble();
+                        if(radius > 0) {
+                            break;
+                        }
+                        System.out.println("Invalid input, try again.");
+                    }
                     System.out.println("Area of circle: " + rounded(circle(radius)));
                 }
                 default -> {
-                    System.out.println("Enter the base: ");
-                    double base = input.nextDouble();
-                    System.out.println("Enter the height: ");
-                    double height = input.nextDouble();
+                    double base = 0;
+                    double height = 0;
+                    while(true) {
+                        System.out.println("Enter the base: ");
+                        base = input.nextDouble();
+                        System.out.println("Enter the height: ");
+                        height = input.nextDouble();
+                        if(height > 0 || base > 0) {
+                            break;
+                        }
+                        System.out.println("Invalid input, try again. ");
+                    }
                     
                     switch(choice) {
                         case 2 -> System.out.println("Area of rectangle: " + rounded(rectangle(height, base)));

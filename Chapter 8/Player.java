@@ -16,7 +16,7 @@ public class Player {
         int roll = random.nextInt(1,7);
         System.out.println("You rolled a " + roll);
 
-        if(score <= 0) {
+        if((score - roll) <= 0) {
             score += roll;
         } else {
             score -= roll;

@@ -11,7 +11,7 @@ public class PlayerTester {
             while(true) {
                 System.out.println("How many players? ");
                 players = input.nextInt();
-                if(players >= 1) {
+                if(players > 1) {
                     break;
                 }
                 System.out.println("Invalid input, try again. \n");

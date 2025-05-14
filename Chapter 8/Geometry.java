@@ -39,7 +39,7 @@ public class Geometry {
                         base = input.nextDouble();
                         System.out.println("Enter the height: ");
                         height = input.nextDouble();
-                        if(height > 0 || base > 0) {
+                        if(height > 0 && base > 0) {
                             break;
                         }
                         System.out.println("Invalid input, try again. ");

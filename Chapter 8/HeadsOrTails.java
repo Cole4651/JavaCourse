@@ -40,6 +40,7 @@ public class HeadsOrTails {
                         if(choice.equals("heads") || choice.equals("tails")) {
                             break;
                         }
+                        System.out.println("Try again. ");
                     }
 
                     if(choice.equals(roll)) {
